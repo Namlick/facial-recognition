@@ -107,7 +107,7 @@ class CameraApp(App):
                     boxes = face_recognition.face_locations(img)
                     encodings = face_recognition.face_encodings(img, boxes)
                     names = []
-                    # loop over the facial embeddings
+                    	# loop over the facial embeddings
 	            	for encoding in encodings:
 						# attempt to match each face in the input image to our known
 		            	# encodings
