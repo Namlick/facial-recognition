@@ -110,19 +110,17 @@ class CameraApp(App):
                     
                     for encoding in encodings:
                         matches = face_recognition.compare_faces(data["encodings"], encoding)
-                        name = "Unknown"
-                        
-                    if True in matches:
-                        matchedIdxs = [i for (i, b) in enumerate(matches) if b]
-                        counts = {}
-                        for i in matchedIdxs:
-                            name = data["names"][i]
-                            counts[name] = counts.get(name, 0) + 1
-                        name = max(counts, key=counts.get)
-                        
-                        if currentname != name:
-                            currentname = name
-                    names.append(name)
+                        name = "Unknown" 
+                        if True in matches:
+                            matchedIdxs = [i for (i, b) in enumerate(matches) if b]
+                            counts = {}
+                            for i in matchedIdxs:
+                                name = data["names"][i]
+                                counts[name] = counts.get(name, 0) + 1
+                            name = max(counts, key=counts.get)
+                            if currentname != name:
+                                currentname = name
+                        names.append(name)
                     
 
                      ###########################################
