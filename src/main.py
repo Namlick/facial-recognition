@@ -145,7 +145,7 @@ class CameraApp(App):
                     print(e)
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(prog="amiga-camera-app")
-    parser.add_argument("--port", type=int, default=1, help="The camera port.") #required=True instead of default=0
+    parser.add_argument("--port", type=int, required=True, help="The camera port.") #required=True instead of default=0
     parser.add_argument(
         "--address", type=str, default="localhost", help="The camera address"
     )
