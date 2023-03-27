@@ -121,7 +121,11 @@ class CameraApp(App):
                             if currentname != name:
                                 currentname = name
                         names.append(name)
-                    
+                    for ((top, right, bottom, left), name) in zip(boxes, names):
+                        cv2.rectangle(frame, (left, top), (right, bottom), (0, 255, 225), 2)
+                        y = top - 5 if top - 5 > 5 else top + 5
+                        cv2.rectangle(frame, (left, top-20), (int((left+right)/2), top), (0, 255, 255), -1)
+                        cv2.putText(frame, name, (left, y), cv2.FONT_HERSHEY_SIMPLEX, .5, (0, 0, 0), 2)
 
                      ###########################################
 
