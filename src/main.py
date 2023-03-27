@@ -150,7 +150,7 @@ if __name__ == "__main__":
         "--address", type=str, default="localhost", help="The camera address"
     )
     parser.add_argument(
-        "--stream-every-n", type=int, default=1, help="Streaming frequency"
+        "--stream-every-n", type=int, default=0, help="Streaming frequency"
     )
     args = parser.parse_args()
     loop = asyncio.get_event_loop()
