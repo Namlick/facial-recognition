@@ -11,6 +11,7 @@ from turbojpeg import TurboJPEG
 
 import cv2
 import face_recognition
+import pickle
 
 #set up pickle for facial recognition
 currentname = "unknown"
