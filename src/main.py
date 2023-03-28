@@ -102,11 +102,11 @@ class CameraApp(App):
                     )
 
                     # Demo opencv use - draw a red circle in the center of the image
-                    cv2.circle(img,(img.shape[1]//2, img.shape[0]//2), 100, (0,0,255), -1)
+                    #cv2.circle(img,(img.shape[1]//2, img.shape[0]//2), 100, (0,0,255), -1)
                     
                     ###########commands for facial recognition###########
-                    boxes = face_recognition.face_locations(img)
-                    encodings = face_recognition.face_encodings(img, boxes)
+                    boxes = face_recognition.face_locations(frame)
+                    encodings = face_recognition.face_encodings(frame, boxes)
                     names = []
                     
                     for encoding in encodings:
