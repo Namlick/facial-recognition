@@ -5,6 +5,6 @@ $DIR/bootstrap.sh $DIR $DIR/venv
 
 $DIR/venv/bin/python $DIR/src/train_model.py $@
 
-$DIR/venv/bin/python $DIR/src/main.py $@
+$DIR/venv/bin/python $DIR/src/main2.py $@
 
 exit 0
